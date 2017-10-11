@@ -1,0 +1,5 @@
+name: Jenkins Test Version
+description: |
+  Private Jenkins
+version: v0.1.0
+category: Continuous Integration
