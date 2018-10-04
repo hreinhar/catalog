@@ -1,0 +1,23 @@
+version: '2'
+volumes:
+  Shopware_DB:
+    external: true
+    driver: ${VOLUME_DRIVER}
+  Shopware_www:
+    external: true
+    driver: ${VOLUME_DRIVER}
+services:
+  shopwaredb:
+    image: mysql:5.5
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+    - ${DATA_DB}:/var/lib/mysql
+  shopware:
+    image: kurthuwig/shopware:latest
+    environment:
+      PHPMYADMIN_PW: ${MYSQL_ROOT_PASSWORD}
+    volumes:
+    - ${DATA_WWW}:/var/www/html
+    links:
+    - shopwaredb:db

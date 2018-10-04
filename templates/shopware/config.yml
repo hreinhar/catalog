@@ -1,0 +1,5 @@
+name: Shopware
+description: |
+  Shopware Docker Version von kurthuwig
+version: v5.3.2
+category: Shop System
