@@ -5,8 +5,6 @@ shopwaredb:
   volumes:
   - ${DATA_DB}:/var/lib/mysql
   volume_driver: ${VOLUME_DRIVER}
-  tty: true
-  stdin_open: true
   labels:
     io.rancher.container.pull_image: always
 shopware:
@@ -16,8 +14,6 @@ shopware:
   volumes:
   - ${DATA_WWW}:/var/www/html
   volume_driver: ${VOLUME_DRIVER}
-  tty: true
-  stdin_open: true
   labels:
     io.rancher.container.pull_image: always
   links:
