@@ -89,6 +89,21 @@
         - "no"
       default: "no"
       required: false
+    - variable: DATA_DB
+      label: "Directory where DB-Files will reside"
+      description: "Directory where DB-Files will reside"
+      default: "Shopware_DB"
+      required: true
+      type: "string"
+    - variable: VOLUME_DRIVER
+      label: "The volume driver to use for data directory"
+      description: "The volume driver to use. Options: local or rancher"
+      default: "rancher-nfs"
+      required: true
+      type: "enum"
+      options:
+        - "local"
+        - "rancher-nfs"
 
 version: '2'
 services:
