@@ -4,24 +4,24 @@
   description: |
     "OpenSource Shop System"
   questions:
-  - variable: "MYSQL_ROOT_PASSWORD"
+  - variable: MYSQL_ROOT_PASSWORD
     label: "Password for Database Administrator"
     default:
     required: true
     type: "password"
-  - variable: "DATA_WWW"
+  - variable: DATA_WWW
     label: "Directory where html-Files will reside"
     description: "Directory where html-Files will reside"
     default: "Shopware_www"
     required: true
     type: "string"
-  - variable: "DATA_DB"
+  - variable: DATA_DB
     label: "Directory where DB-Files will reside"
     description: "Directory where DB-Files will reside"
     default: "Shopware_DB"
     required: true
     type: "string"
-  - variable: "VOLUME_DRIVER"
+  - variable: VOLUME_DRIVER
     label: "The volume driver to use for data directory"
     description: "The volume driver to use. Options: local or rancher"
     default: "rancher-nfs"
@@ -30,19 +30,19 @@
     options:
       - "local"
       - "rancher-nfs"
-  - variable: "mysql_database"
+  - variable: mysql_database
     description: "Optional, allows you to specify the name of a database to be created on image startup."
     label: "MySQL Database"
     default: "shopware"
     required: false
     type: "string"
-  - variable: "mysql_user"
+  - variable: mysql_user
     description: "Creates an additional MySQL (super)user. MySQL Password must also be set."
     label: "MySQL User"
     default: "shopware"
     required: false
     type: "string"
-  - variable: "mysql_password"
+  - variable: mysql_password
     description: "A password for the additional MySQL (super)user. MySQL User must also be set."
     label: "MySQL Password"
     required: false
