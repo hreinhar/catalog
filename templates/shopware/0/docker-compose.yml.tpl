@@ -21,5 +21,7 @@ services:
     volumes:
       - ${DATA_WWW}:/var/www/html
     volume_driver: ${VOLUME_DRIVER}
+    links:
+    - shopwaredb:db
     labels:
       io.rancher.container.pull_image: always
