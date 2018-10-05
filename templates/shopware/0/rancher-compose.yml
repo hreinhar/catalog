@@ -3,6 +3,7 @@
   version: "5.3.2"
   description: |
     "OpenSource Shop System"
+  uuid: mysql-0
   questions:
   - variable: MYSQL_ROOT_PASSWORD
     label: "Password for Database Administrator"
@@ -47,3 +48,16 @@
     label: "MySQL Password"
     required: false
     type: password
+    
+version: '2'
+services:
+  shopwaredb:
+    scale: 1
+    start_on_create: true
+    health_check:
+      healthy_threshold: 2
+      response_timeout: 2000
+      port: 3306
+      unhealthy_threshold: 3
+      interval: 2000
+      strategy: recreate
