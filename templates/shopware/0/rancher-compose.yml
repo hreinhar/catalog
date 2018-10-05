@@ -30,19 +30,19 @@
     options:
       - "local"
       - "rancher-nfs"
-  - variable: mysql_database
+  - variable: "mysql_database"
     description: "Optional, allows you to specify the name of a database to be created on image startup."
     label: "MySQL Database"
     default: "shopware"
     required: false
     type: "string"
-  - variable: mysql_user
+  - variable: "mysql_user"
     description: "Creates an additional MySQL (super)user. MySQL Password must also be set."
     label: "MySQL User"
     default: "shopware"
     required: false
     type: "string"
-  - variable: mysql_password
+  - variable: "mysql_password"
     description: "A password for the additional MySQL (super)user. MySQL User must also be set."
     label: "MySQL Password"
     required: false
